@@ -540,79 +540,132 @@ section {
     color: #444;
     margin: 0;
 }
-/* CSS CV */
-.cv-section {
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
 
-.cv-container {
+/* CSS Grid Container untuk Card Proyek - Diubah ke 1 kolom vertikal */
+.projects-container {
     display: flex;
-    justify-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.cv-content {
-    display: flex;
+    flex-direction: column; /* Mengubah susunan proyek berjejer dari atas ke bawah */
     align-items: center;
-    justify-content: space-between;
+    gap: 40px; /* Jarak antar kartu diperbesar */
+    padding: 50px 100px;
+}
+
+/* Desain Card Proyek - Memanjang ke samping */
+.project-card {
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 12px;
-    padding: 35px 50px;
-    width: 80%; 
+    width: 90%; /* Kartu ditarik hampir penuh agar lega */
+    display: flex;
+    flex-direction: row; /* Teks dan gambar bersebelahan (kiri-kanan) */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 6px solid #9822e7;
+    overflow: hidden;
 }
 
-.cv-content:hover {
-    transform: translateY(-5px);
+#spotify{
+    border-left: 6px solid #1DB954;
+}
+#bekantan{
+    border-left: 6px solid yellow;
+}
+
+#arzefy{
+    border-left: 6px solid #0C5C98;
+}
+.project-card:hover {
+    transform: translateY(-5px); 
     box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 25px;
 }
 
-.cv-icon {
-    font-size: 50px;
-    color: #9822e7; 
-    margin-right: 30px;
+/* Container Gambar Proyek */
+.project-image {
+    width: 45%; /* Ruang gambar mengambil 45% dari total kartu */
+    min-height: 300px; /* Tinggi gambar diperbesar */
+    background-color: #f8f9fa; /* Warna abu muda agar gambar terlihat menyatu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eee; /* Garis pemisah antara gambar dan teks */
 }
 
-.cv-text {
-    flex-grow: 1; 
-    padding-right: 30px;
+/* Mengatur ukuran gambar agar proporsional dan tidak terpotong */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* PENTING: Memastikan gambar landscape masuk seluruhnya */
+    padding: 20px; /* Memberi jarak agar ujung screenshot tidak menabrak batas kartu */
+    transition: transform 0.5s ease;
 }
 
-.cv-text h3 {
-    color: #8d4b0e;
-    font-size: 20pt;
-    font-weight: 500;
-    margin: 0 0 10px 0;
+.project-card:hover .project-image img {
+    transform: scale(1.05); /* Efek zoom halus saat kartu disentuh */
 }
 
-.cv-text p {
+/* Info Teks Proyek */
+.project-info {
+    width: 55%; /* Ruang teks mengambil sisa 55% */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Menengahkan teks secara vertikal sejajar dengan gambar */
+}
+
+.project-info h4 {
+    color: #0C5C98;
+    font-size: 18pt; /* Ukuran judul proyek sedikit dibesarkan */
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.project-info p {
     color: #444;
     font-size: 11.5pt;
     font-weight: 300;
-    margin: 0;
     line-height: 1.6;
+    margin-bottom: 25px;
 }
 
-.cv-btn {
-    background-color: #9822e7;
-    color: white;
-    text-decoration: none;
-    padding: 14px 28px;
-    border-radius: 30px; 
-    font-weight: 500;
-    font-size: 12pt;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+/* Desain Badge Teknologi yang Digunakan */
+.tech-stack {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap; 
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.cv-btn:hover {
-    background-color: #7a1ab8;
-    transform: scale(1.05); 
+.tech-stack span {
+    background-color: #f5f5f5;
+    color: #555;
+    font-size: 9.5pt;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px; 
+    border: 1px solid #e0e0e0;
+}
+
+/* Desain Tombol GitHub pada Card Proyek */
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Jarak antara ikon dan teks */
+    background-color: #24292e; /* Warna abu gelap khas GitHub */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 10.5pt;
+    font-weight: 500;
+    margin-top: 25px; /* Jarak dari kotak Tech Stack di atasnya */
+    align-self: flex-start; /* Memastikan tombol tidak merentang ke samping */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.github-btn:hover {
+    background-color: #000; /* Warna menjadi hitam pekat saat disentuh */
+    transform: translateY(-2px); /* Efek tombol terangkat sedikit */
+}
+
+.github-btn i {
+    font-size: 14pt;
 }
