@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fikri Putra Suyadi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="indentity">
+            <a href="#hero"><p id="name">Fikri Putra Suyadi</p></a>
+            <span id="role">Full Stack Developer</span>
+        </div>
+        <hr>
+<ul class="navigation">
+            <li class="nav-item" id="about-nav"><a id="change" href="#about"><i class='fas fa-user' style="margin-right: 15px; color: cornflowerblue;"></i>About</a></li>
+            <li class="nav-item" id="education-nav"><a id="change" href="#education"><i class='fas fa-graduation-cap' style="margin-right: 15px; color: blue;"></i>Education</a></li>
+            <li class="nav-item" id="skill-nav"><a id="change" href="#skill"><i class='fas fa-code' style="margin-right: 15px; color: orangered;"></i>Skill</a></li>
+            <li class="nav-item" id="projects-nav"><a id="change" href="#projects"><i class='fas fa-folder-open' style="margin-right: 15px; color: red;"></i>Projects</a></li>
+            <li class="nav-item" id="contact-nav"><a id="change" href="#contact"><i class='fas fa-envelope' style="margin-right: 15px; color: #97c714;"></i>Contact</a></li>
+            <li class="nav-item" id="cv-nav">
+                <a id="change" href="{{ url_for('static', filename='files/CV_Fikri.pdf') }}" target="_blank">
+                    <i class='fas fa-file-download' style="margin-right: 15px; color: #9822e7;"></i>CV / Resume
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                <h1>Aku Harus Menjadi <span class="highlight">Lebih Baik</span> daripada <span class="highlight2">Diriku yang Lalu</span></h1>
+                </div>
+                <div class="hero-image">
+                <img id="intro" src="{{url_for('static', filename='images/tampan.png')}}" alt="Fikri Putra Suyadi">
+                </div>
+            </div>
+        </section>
+<section class="about" id="about">
+            <div class="section-title">
+                <h2>ABOUT ME</h2>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-content">
+                    <h3>Memadukan Logika dan Kreativitas dalam Kode</h3>
+                    <p>Halo! Saya Fikri Putra Suyadi, mahasiswa Teknik Informatika di Politeknik Negeri Jakarta yang memiliki minat besar dalam pengembangan perangkat lunak. Saat ini saya sedang berfokus mengembangkan kemampuan sebagai Full Stack Developer, mulai dari membangun antarmuka pengguna yang responsif hingga mengembangkan backend dan mengelola database. Saya percaya bahwa proses belajar yang konsisten adalah kunci untuk menciptakan solusi digital yang bermanfaat dan berkualitas.</p>
+                </div>
+            </div>
+        </section>
+<section class="education" id="education">
+            <div class="section-title">
+                <h2>EDUCATION</h2>
+            </div>
+            <div class="education-container">
+            
+            <!-- Kampus 1: PNJ -->
+            <div class="education-location">
+                <div class="education-title">
+                    <h3>Politeknik Negeri Jakarta <i class="fas fa-map-marker-alt" style="color: #e74c3c; font-size: 18px; margin-left: 5px; cursor: pointer;" onclick="changeToMap('pnj-img-container', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.589490750531!2d106.82316258499648!3d-6.37087889221856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec1cabb59bdf%3A0x28b4f84e4677f329!2sPoliteknik%20Negeri%20Jakarta!5e0!3m2!1sid!2sid!4v1783435509866!5m2!1sid!2sid')" title="Tampilkan Peta"></i></h3>
+                    <span>D4 Teknik Informatika</span>
+                    <span class="academic-year">2023 - Sekarang</span>
+                </div>
+                
+                <div class="education-image" id="pnj-img-container">
+                    <img src="{{url_for('static', filename='images/pnj.png')}}" alt="Politeknik Negeri Jakarta">
+                </div>
+            </div>
+            <!-- Kampus 2: CCIT UI -->
+            <div class="education-location">
+                <div class="education-title">
+                    <h3>CEP CCIT FTUI <i class="fas fa-map-marker-alt" style="color: #e74c3c; font-size: 18px; margin-left: 5px; cursor: pointer;" onclick="changeToMap('ccit-img-container', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.246614803822!2d106.82234407573301!3d-6.362120062239738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec18c3e8e717%3A0x9f2283e905986b55!2sCEP%20CCIT%20FTUI!5e0!3m2!1sid!2sid!4v1783435778616!5m2!1sid!2sid')" title="Tampilkan Peta"></i></h3>
+                    <span>Software Engineering</span>
+                    <span class="academic-year">2023 - 2025</span>
+                </div>
+                
+                <div class="education-image" id="ccit-img-container">
+                    <img src="{{url_for('static', filename='images/ccit-logo.png')}}" alt="CCIT">
+                </div>
+            </div>
+            
+            </div>
+        </section>
+
+
+<section class="skill" id="skill">
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+            <div class="skill-container">
+                <div class="skill-group">
+                    <div class="skill-title">
+                <h4>Frontend</h4>
+            </div>
+                <div class="skill-item">
+                    <div class="item1">
+                        <img src="{{url_for('static', filename='images/html-icon.png')}}" alt="">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="item2">
+                        <img src="{{url_for('static', filename='images/css-icon.png')}}" alt="">
+                        <span>CSS3</span>
+                    </div>
+                      <div class="item3">
+                        <img src="{{url_for('static', filename='images/js-icon.png')}}" alt="">
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+        </div>
+        <div class="skill-group">
+                    <div class="skill-title">
+                <h4>Backend</h4>
+            </div>
+                <div class="skill-item">
+                    <div class="item1">
+                        <img src="{{url_for('static', filename='images/python-icon.png')}}" alt="">
+                        <span>Python</span>
+                    </div>
+                    <div class="item2">
+                        <img src="{{url_for('static', filename='images/java-icon.png')}}" alt="">
+                        <span>Java</span>
+                    </div>
+                </div>
+        </div>
+                <div class="skill-group">
+                    <div class="skill-title">
+                <h4>Framework</h4>
+            </div>
+                <div class="skill-item">
+                    <div class="item1">
+                        <img src="{{url_for('static', filename='images/flask-icon.png')}}" alt="">
+                        <span>Flask</span>
+                    </div>
+                    <div class="item2">
+                        <img src="{{url_for('static', filename='images/node-icon.png')}}" alt="">
+                        <span>Node</span>
+                    </div>
+                </div>
+        </div>
+                <div class="skill-group">
+                    <div class="skill-title">
+                <h4>Database</h4>
+            </div>
+                <div class="skill-item">
+                    <div class="item1">
+                        <img src="{{url_for('static', filename='images/postgre-icon.png')}}" alt="">
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="item2">
+                        <img src="{{url_for('static', filename='images/mysql-icon.png')}}" alt="">
+                        <span>MySQL</span>
+                    </div>
+                </div>
+        </div>
+                <div class="skill-group">
+                    <div class="skill-title">
+                <h4>Backend Services</h4>
+            </div>
+                <div class="skill-item">
+                    <div class="item1">
+                        <img src="{{url_for('static', filename='images/firebase-icon.png')}}" alt="">
+                        <span>Firebase</span>
+                    </div>
+                    <div class="item2">
+                        <img src="{{url_for('static', filename='images/supabase-icon.png')}}" alt="">
+                        <span>Supabase</span>
+                    </div>
+                </div>
+        </div>
+                        <div class="skill-group">
+                    <div class="skill-title">
+                <h4>Tools</h4>
+            </div>
+                <div class="skill-item">
+                    <div class="item1">
+                        <img src="{{url_for('static', filename='images/git-icon.png')}}" alt="">
+                        <span>Git</span>
+                    </div>
+                    <div class="item2">
+                        <img src="{{url_for('static', filename='images/github-icon.png')}}" alt="">
+                        <span>Github</span>
+                    </div>
+                     <div class="item3">
+                        <img src="{{url_for('static', filename='images/vsc-icon.png')}}" alt="">
+                        <span>Visual Studio Code</span>
+                    </div>
+                    <div class="item4">
+                        <img src="{{url_for('static', filename='images/figma-icon.png')}}" alt="">
+                        <span>Figma</span>
+                    </div>
+                </div>
+
+        </div>
+            </div>
+        </section>
+<!-- GANTI BAGIAN PROJECTS INI -->
+        <section class="projects" id="projects">
+            <div class="section-title">
+                <h2>PROJECTS</h2>
+            </div>
+            
+            <div class="projects-intro">
+                <div class="projects-intro-content">
+                    <h3>Implementasi Solusi Melalui Kode</h3>
+            </div>
+            
+
+            <div class="projects-container">
+
+            </div>
+        </section>
+<section class="contact" id="contact">
+            <div class="section-title">
+                <h2>CONTACT</h2>
+            </div>
+            
+            <div class="contact-container">
+                <!-- Card Gmail -->
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>Silakan hubungi saya melalui email untuk kolaborasi atau peluang profesional.</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fikrimpik04@gmail.com" target="_blank" class="contact-btn">Kirim Email</a>
+                </div>
+
+                <!-- Card LinkedIn -->
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Mari terhubung dan kembangkan jaringan profesional kita bersama.</p>
+                    <a href="https://www.linkedin.com/in/fikri-putra-suyadi-7434562b1/" target="_blank" class="contact-btn">Kunjungi Profil</a>
+                </div>
+
+                <!-- Card GitHub -->
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Lihat *source code* dan dokumentasi proyek-proyek yang pernah saya buat.</p>
+                    <a href="https://github.com/SirFik78" target="_blank" class="contact-btn">Lihat Repository</a>
+                </div>
+            </div>
+        </section>
+        <div id="mapModal" class="modal" onclick="closeMap()">
+            <span class="close-btn">&times;</span>
+            <div id="modalContent" class="modal-content"></div>
+        </div>
+    </main>
+    <script src="{{url_for('static', filename='js/maps.js')}}"></script>
+</body>
+</html>
